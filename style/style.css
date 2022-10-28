@@ -1,0 +1,268 @@
+/* CSS reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 20px 78px 34px 78px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+@media (max-width: 767px) {
+  header {
+    padding: 20px;
+  }
+}
+
+header .logo img {
+  width: 70px;
+}
+@media (max-width: 767px) {
+  header .logo img {
+    width: 45px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .fa-bars {
+  display: none;
+}
+@media (max-width: 767px) {
+  header nav .fa-bars {
+    display: block;
+  }
+}
+
+.navbar .menu {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .navbar .menu {
+    display: block;
+    position: absolute;
+    /* background-color: aqua; */
+    left: 0;
+    right: 0;
+    top: 80px;
+    padding: 30px 0;
+    display: none;
+  }
+  .navbar .menu.open {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .menu li {
+    padding: 5px;
+  }
+}
+.navbar a {
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 10px 8px;
+  margin: 0 20px;
+}
+@media (max-width: 767px) {
+  .navbar a {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 8px;
+    margin: 10px 20px;
+  }
+}
+.navbar li:last-child a {
+  padding-right: 0;
+}
+
+.navbar li a {
+  transition: color ease 0.8s;
+}
+.navbar li:hover a {
+  color: #f70142;
+}
+
+.navbar li.active a {
+  border-bottom: 2px solid #f70142;
+}
+@media (max-width: 767px) {
+  .navbar li.active a {
+    border-bottom: none;
+  }
+}
+/* Hero section */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  /* display: none; */
+}
+.hero img {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .hero img {
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+.hero .hero-info h1 {
+  color: white;
+  font-size: 74px;
+  font-weight: 900;
+  line-height: 74px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 767px) {
+  .hero .hero-info h1 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero .hero-info h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+.hero .hero-info {
+  /* This is another way to make data center */
+  /* position: absolute;
+  top: 50%;
+ 
+  transform: translateY(-50%); */
+  position: absolute;
+  top: 0;
+  left: 78px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 405px;
+}
+
+@media (max-width: 767px) {
+  .hero .hero-info {
+    left: 24px;
+    top: auto;
+    bottom: 80px;
+  }
+}
+
+/* .hero .hero-info h1 span {
+  font-size: 38px;
+  font-weight: 400;
+  display: block;
+} */
+
+.hero .hero-info p {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 42px;
+}
+
+@media (max-width: 767px) {
+  .hero .hero-info p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+}
+.hero .hero-info .cta-button {
+  background-color: #f70142;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 24px;
+  display: block;
+  width: 300px;
+  text-align: center;
+  transition: background-color ease 0.5s;
+}
+@media (max-width: 767px) {
+  .hero .hero-info .cta-button {
+    width: 150px;
+    font-size: 15px;
+    padding: 12px 30px;
+  }
+}
+.hero .hero-info .cta-button:hover {
+  background-color: black;
+}
+
+.hero .swiper-pagination {
+  bottom: 140px;
+  text-align: right;
+  padding-right: 78px;
+}
+@media (max-width: 767px) {
+  .hero .swiper-pagination {
+    text-align: left;
+    bottom: 0;
+  }
+}
+
+.hero .swiper-pagination .swiper-pagination-bullet {
+  width: 23px;
+  height: 23px;
+  background: transparent;
+  border: 2px solid white;
+  opacity: 1;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .hero .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
+.hero
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: 2px solid #f70142;
+}
+
+.hero .swiper-slide::before {
+  content: "";
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
